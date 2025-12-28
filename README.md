@@ -1,6 +1,6 @@
 # How do you use this Repo for Dashboard...
 
-### Installation
+## Installation
 
 1. **Clone the repository:**
 
@@ -149,7 +149,7 @@ export default function Button({ className, variant = "primary", children }) {
 }
 ```
 
-### Dependencies
+## Dependencies
 
 ```
 dependencies: {
