@@ -7,7 +7,7 @@ export default function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen w-full bg-[#0a1024] text-gray-100">
+    <div className="flex h-screen w-full bg-[#F8FAFC] text-gray-900">
       <Sidebar
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
@@ -17,7 +17,7 @@ export default function DashboardLayout() {
 
         <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
-        <main className="flex-1 overflow-y-auto bg-[#162456] p-4 md:p-6 text-white relative">
+        <main className="flex-1 overflow-y-auto bg-[#F8FAFC] p-4 md:p-6 text-gray-900 relative">
           <Outlet />
         </main>
       </div>
