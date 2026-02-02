@@ -10,8 +10,8 @@ export default function AuthInput({
   const isPassword = type === "password";
 
   return (
-    <div className="space-y-1">
-      <label className="text-sm font-medium text-gray-700">
+    <div className="space-y-3">
+      <label className="block text-md font-medium text-gray-700">
         {label}
       </label>
 
@@ -19,14 +19,14 @@ export default function AuthInput({
         <input
           type={isPassword && showPassword ? "text" : type}
           placeholder={placeholder}
-          className="w-full rounded-md border border-gray-300 px-3 py-2 pr-10 text-sm focus:border-blue-500 focus:outline-none"
+          className="w-full rounded-md border border-gray-300 px-3 py-3 pr-10 text-sm focus:border-blue-500 focus:outline-none"
         />
 
         {isPassword && (
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
           >
             <Icon
               icon={

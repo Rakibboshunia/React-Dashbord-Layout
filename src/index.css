@@ -8,3 +8,9 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  font-family: 'Inter';
+  line-height: 100%;
+  letter-spacing: 0px;
+}

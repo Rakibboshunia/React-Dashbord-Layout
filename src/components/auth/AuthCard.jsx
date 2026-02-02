@@ -1,6 +1,6 @@
 export default function AuthCard({ children }) {
   return (
-    <div className="w-full max-w-md rounded-xl bg-white p-8 shadow-sm">
+    <div className="w-full max-w-lg rounded-2xl bg-white p-16 shadow-xl">
       {children}
     </div>
   );

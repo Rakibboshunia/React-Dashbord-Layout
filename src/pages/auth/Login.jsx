@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
 import AuthLayout from "../../components/auth/AuthLayout";
 import AuthCard from "../../components/auth/AuthCard";
 import AuthInput from "../../components/auth/AuthInput";
 import PrimaryButton from "../../components/auth/PrimaryButton";
 import Logo from "../../assets/images/logo3.png";
+import BackNextActions from "../../components/auth/BackNextActions";
 
 export default function Login() {
   return (
     <AuthLayout>
       <AuthCard>
-        <div className="text-center space-y-5">
-          <img src={Logo} className="mx-auto h-25" />
+        <div className="text-center space-y-6">
+          <img src={Logo} className="mx-auto h-30 scale-[1.3]" />
           <h2 className="text-3xl font-semibold">Login to Account</h2>
           <p className="text-md text-gray-500">
             Please enter your email and password to continue
@@ -19,16 +19,10 @@ export default function Login() {
         </div>
 
         <div className="mt-6 space-y-4">
-          <AuthInput
-            label="Email Address"
-            placeholder="admin@email.com"
-          />
+          {/* Form */}
+            <AuthInput label="Email Address" placeholder="admin@email.com" />
 
-          <AuthInput
-            label="Password"
-            type="password"
-            placeholder="********"
-          />
+            <AuthInput label="Password" type="password" placeholder="********" />
 
           {/* Remember + Forgot */}
           <div className="flex items-center justify-between text-sm">
@@ -52,7 +46,12 @@ export default function Login() {
         </div>
 
         {/* Back to Home */}
-        <div className="mt-6 text-center">
+        <BackNextActions 
+          backTo="/" 
+          showNext={false} 
+        />
+
+        {/* <div className="mt-6 text-center">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition"
@@ -60,7 +59,7 @@ export default function Login() {
             <Icon icon="heroicons-outline:arrow-left" width={18} />
             Back to Home
           </Link>
-        </div>
+        </div> */}
       </AuthCard>
     </AuthLayout>
   );

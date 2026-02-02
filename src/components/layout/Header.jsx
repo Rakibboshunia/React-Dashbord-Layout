@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 export default function Header({ onMenuClick }) {
     return (
-        <header className="sticky top-0 z-10 flex h-20 w-full items-center justify-between bg-[#111B3C] border-b border-[#2B7FFF33] px-6 text-white shadow-sm">
+        <header className="sticky top-0 z-10 flex h-25 w-full items-center justify-between bg-[#111B3C] border-b border-[#2B7FFF33] px-6 text-white shadow-sm">
             <div className="flex items-center gap-4">
                 {/* Mobile Menu Button */}
                 <button

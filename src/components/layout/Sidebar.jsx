@@ -47,9 +47,9 @@ const navigate = useNavigate();
       >
         <div className="flex h-full flex-col">
           {/* Change the compnay logo on this div */}
-          <div className="flex h-20 items-center justify-between px-15 border-b border-[#2B7FFF33]">
+          <div className="flex h-25 items-center justify-between px-15 border-b border-[#2B7FFF33]">
             <div className="text-xl font-bold tracking-wider">
-              <img src={Logo} alt="Company Logo" className="h-38 w-auto" />
+              <img src={Logo} alt="Company Logo" className="h-36 w-auto scale-[1.3]" />
             </div>
 
             <button
@@ -61,14 +61,14 @@ const navigate = useNavigate();
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
+          <nav className="flex-1 space-y-3 overflow-y-auto px-4 py-6">
             {navLinks.map((item) => {
               return (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                    `flex items-center gap-3 rounded-lg px-4 py-3 text-xl font-sm transition-colors ${
                       isActive
                         ? "bg-[#2B7FFF] text-white"
                         : "text-gray-300 hover:bg-[#1f2d5c] hover:text-white"
@@ -81,7 +81,7 @@ const navigate = useNavigate();
                     }
                   }}
                 >
-                  <Icon icon={item.icon} width="20" height="20" />
+                  <Icon icon={item.icon} width="26" height="26" />
                   {item.name}
                 </NavLink>
               );
@@ -94,9 +94,9 @@ const navigate = useNavigate();
               onClick={() => {
                 navigate("/login");
               }}
-              className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-gray-300 cursor-pointer transition-colors hover:bg-[#1f2d5c] hover:text-white"
+              className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-xl font-sm text-gray-300 cursor-pointer transition-colors hover:bg-[#1f2d5c] hover:text-white"
             >
-              <Icon icon="material-symbols:logout" width="20" height="20" />
+              <Icon icon="material-symbols:logout" width="22" height="22" />
               Sign Out
             </button>
           </div>
