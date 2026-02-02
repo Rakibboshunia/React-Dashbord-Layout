@@ -14,10 +14,10 @@ export default function DashboardLayout() {
       />
 
       <div className="flex flex-1 flex-col overflow-hidden">
-
+        {/* ✅ Header is inside Dashboard layout → AuthContext works */}
         <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
-        <main className="flex-1 overflow-y-auto bg-[#F8FAFC] p-4 md:p-6 text-gray-900 relative">
+        <main className="flex-1 overflow-y-auto bg-[#F8FAFC] p-4 md:p-6 relative">
           <Outlet />
         </main>
       </div>

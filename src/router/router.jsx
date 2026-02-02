@@ -14,6 +14,7 @@ import ResetPassword from "../pages/auth/ResetPassword";
 import Success from "../pages/auth/Success";
 
 const router = createBrowserRouter([
+  // 🔐 AUTH ROUTES
   {
     path: "/login",
     element: <Login />,
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <Profile />,
+        element: <Profile />, // ✅ Header dropdown → works
       },
     ],
   },

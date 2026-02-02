@@ -46,7 +46,7 @@ export default function Sidebar({ isOpen, onClose }) {
       >
         <div className="flex h-full flex-col">
           {/* Logo */}
-          <div className="flex h-20 items-center justify-between px-5 border-b border-gray-200">
+          <div className="flex h-24 items-center justify-between px-5 border-b border-gray-200">
             <Link
               to="/"
               onClick={() => window.innerWidth < 768 && onClose()}
@@ -54,28 +54,28 @@ export default function Sidebar({ isOpen, onClose }) {
             >
               <img
                 src={Logo}
-                alt="Company Logo"
-                className="h-10 w-auto scale-[1.8]"
+                alt="Soundtrack my night logo"
+                className="h-10 w-auto scale-[2.3]"
               />
             </Link>
 
             <button
               onClick={onClose}
-              className="rounded-md p-1 hover:bg-gray-100 md:hidden"
+              className="rounded-md p-1 hover:bg-gray-100 md:hidden cursor-pointer"
             >
               <Icon icon="material-symbols:close" width="30" />
             </button>
           </div>
 
           {/* Nav Links */}
-          <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
+          <nav className="flex-1 space-y-1 overflow-y-auto px-5 py-6">
             {navLinks.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 onClick={() => window.innerWidth < 768 && onClose()}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-lg px-4 py-2 text-base transition-colors
+                  `flex items-center gap-3 rounded-lg px-4 py-4 text-xl transition-colors 
                   ${
                     isActive
                       ? "bg-blue-50 text-blue-600"
@@ -85,11 +85,11 @@ export default function Sidebar({ isOpen, onClose }) {
               >
                 <Icon
                   icon={item.icon}
-                  width="22"
-                  height="22"
+                  width="28"
+                  height="26"
                   className="text-inherit"
                 />
-                <span className="hidden sm:inline">{item.name}</span>
+                <span>{item.name}</span>
               </NavLink>
             ))}
           </nav>
@@ -98,10 +98,10 @@ export default function Sidebar({ isOpen, onClose }) {
           <div className="border-t border-gray-200 p-4">
             <button
               onClick={() => navigate("/login")}
-              className="flex w-full items-center gap-3 rounded-lg px-4 py-2 text-base text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition"
+              className="flex w-full items-center gap-3 rounded-lg px-4 py-2 text-xl text-red-600 hover:bg-gray-200 transition cursor-pointer"
             >
-              <Icon icon="material-symbols:logout" width="20" />
-              <span className="hidden sm:inline">Sign Out</span>
+              <Icon icon="material-symbols:logout" width="26" />
+              <span>Sign Out</span>
             </button>
           </div>
         </div>
